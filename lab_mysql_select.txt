@@ -1,3 +1,7 @@
+'''
+L.S. Yes, very good!
+'''
+
 # Challenge 1 - Who Have Published What At Where?
 SELECT authors.au_id, authors.au_lname, authors.au_fname, titles.title, publishers.pub_name
 FROM authors, titles, publishers
@@ -23,6 +27,10 @@ FROM authors LEFT JOIN titleauthor
 ON authors.au_id = titleauthor.au_id 
 GROUP BY authors.au_id, authors.au_lname, authors.au_fname
 ORDER BY titles DESC 
+
+'''
+L.S. Well done!
+'''
 
 # Bonus Challenge - Most Profiting Authors 
     SELECT authors.au_id, authors.au_lname, authors.au_fname, SUM(titleauthor.royaltyper) AS royal
